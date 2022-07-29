@@ -17,8 +17,34 @@ body {
   text-align: center;
   background-color: white;
   border-radius: 50%;
+  border: 2px solid red;
   height: 40px;
   width: 40px;
+}
+.player:hover{
+  cursor: pointer;
+}
+.players-container{
+  position: absolute;
+}
+.player-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 254, 254);
+  width: 300px;
+}
+.player-box:hover{
+  cursor: pointer;
+  background-color: bisque;
+}
+.player-picture{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid red;
 }
 
 #goalkeeper {
@@ -84,12 +110,7 @@ body {
   left: 60%;
   right: 40%
 }
-img{
-  width: 100%;
-  height: 40px;
-  border-radius: 50%;
-  display: block;
-}
+
 @media screen and (max-width: 320px) {
   .player {
     display: flex;

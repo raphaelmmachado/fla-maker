@@ -1,16 +1,17 @@
 import players from "./util/players";
-function Select({ handlePlayersData }) {
+function Select({ showContainerState}) {
   return (
-    <>
-      <select onChange={(e) => {
-          handlePlayersData(e.target.value);
-        }}
-      >
-        {players.map((player, index) => (
-          <option key={player.num} value={index}>{player.name}</option>
-        ))}
-      </select>
-    </>
+    <div className="players-container">
+      {players.map((player) => {
+        return (
+          <div onClick={()=> showContainerState()}className="player-box">
+            <img className="player-picture" src={player.img} />
+            <h1> {player.name}</h1>
+            <h5>#{player.num}</h5>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 export { Select };
