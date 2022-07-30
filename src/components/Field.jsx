@@ -28,7 +28,8 @@ function Field({formation}) {
         setCheckFormation(fourthreethree);
         return;
       case "threefivetwo":
-        setCheckFormation(threefivetwo)
+        setCheckFormation(threefivetwo);
+        return;
       default:
         setCheckFormation(fourfourtwo)
         break;
