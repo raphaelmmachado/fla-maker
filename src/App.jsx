@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Field } from "./components/Field";
+import { Options } from "./components/Options";
 
 function App() {
-  
-  //TODO --> INDEX DO JOGADOR NÃO PODE SER STATE!!!
+  const [formation,setFormation] = useState("fourfourtwo")
   return (
     <div className="App">
-      <Field />
-     
+      <Options formationState={(value)=> setFormation(value)}/>
+      <br />
+      <br />
+      <Field formation={formation}/>
     </div>
   );
 }
