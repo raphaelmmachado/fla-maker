@@ -1,12 +1,19 @@
 body {
   background-color: burlywood;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 .field {
   position: relative;
+  display: grid;
+  place-items: center;
   background-color: green;
   width: 320px;
   height: 500px;
+  border-radius: 10px;
 }
+
 .player {
   position: absolute;
   text-align: center;
@@ -16,15 +23,26 @@ body {
   align-items: center;
   text-align: center;
   background-color: white;
+  background-image: url("/src/assets/add.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 50%;
   height: 50px;
   width: 50px;
 }
+.player p{
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+}
 .player:hover{
   cursor: pointer;
+  background-color: rgb(204, 193, 193);
 }
 .players-container{
   position: absolute;
+  max-height: 400px;
+  overflow: scroll;
 }
 .player-box{
   display: flex;
@@ -32,7 +50,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: rgb(255, 254, 254);
-  width: 300px;
+  width: 280px;
 }
 .player-box:hover{
   cursor: pointer;
@@ -46,68 +64,51 @@ body {
   border: 1px solid red;
 }
 
-#goalkeeper {
-  bottom: 90%;
-  left: 50%;
-  right: 50%;
+#first{
+  top: 1%;
+  left:47%;
 }
-#right-back {
-  top: 10%;
-  right: 85%;
-  bottom: 90%;
+#second {
+  top: 22%;
+  left: 5%;
 }
-#left-back{
-    top: 10%;
-    bottom: 90%;
-    right: 15%;  
-    left: 85%;
+#third{
+    top: 22%;  
+    left: 78%;
 }
-#defender-right{
+#fourth{
     top: 10%;
     bottom: 90%;
     left: 25%;
     right: 75%;
 }
-#defender-left{
+#fifth{
     top: 10%;
-    bottom: 90%;
     left: 65%;
 }
-#midfielder-right{
-    top: 25%;
-    left: 35%;
-    right: 65%;
-    bottom: 75%;
+#sixth{
+    top: 40%;
+    left: 26%;
 }
-#midfielder-left{
-    top: 25%;
+#seventh{
+    top: 40%;
     left: 65%;
-    right: 35%;
-    bottom: 75%;
 }
-#attacking-midfielder-right{
-    top: 40%;
-    bottom: 60%;
-    left: 25%;
-    right: 75%;
+#eighth{
+    top: 60%;
+    left: 15%;
 }
-#attacking-midfielder-left{
-    top: 40%;
-    bottom: 60%;
-    left: 75%;
-    right: 25%;
-}
-#attacker-right{
+#ninth{
   top: 60%;
-  bottom: 40%;
-  left: 40%;
-  right: 60%
+  left: 75%;
 }
-#attacker-left{
-  top: 60%;
-  bottom: 40%;
+#tenth{
+  top: 80%;
+  left: 25%;
+}
+#eleventh{
+  top: 80%;
   left: 60%;
-  right: 40%
 }
 
 @media screen and (max-width: 320px) {

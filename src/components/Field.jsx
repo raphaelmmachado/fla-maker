@@ -1,6 +1,7 @@
 import "./4-4-2/fourfourtwo.css";
-import players from "./util/players";
+import {sortedPlayers as players} from "./util/players";
 import { useState } from "react";
+
 function Field({}) {
   const [showPlayersContainer, setShowPlayersContainer] = useState(false);
   const [keyState, setKeyState] = useState("");
@@ -18,132 +19,96 @@ function Field({}) {
   };
   return (
     <main className="field">
-      <div onClick={selectPosition} id="goalkeeper" className="player">
-        {playerState["goalkeeper"] && (
-          <>
-            <img
-              className="player-picture"
-              src={playerState["goalkeeper"].img}
-            />
-            <p>{playerState["goalkeeper"].name}</p>
-          </>
-        )}
-      </div>
-      <div onClick={selectPosition} id="right-back" className="player">
-        {playerState["right-back"] && (
-          <>
-            <img
-              className="player-picture"
-              src={playerState["right-back"].img}
-            />
-            <p>{playerState["right-back"].name}</p>
-          </>
-        )}
-      </div>
-      <div onClick={selectPosition} id="defender-right" className="player">
-        {playerState["defender-right"] && (
-          <>
-            <img
-              className="player-picture"
-              src={playerState["defender-right"].img}
-            />
-            <p>{playerState["defender-right"].name}</p>
-          </>
-        )}
-      </div>
-      <div onClick={selectPosition} id="defender-left" className="player">
-        {playerState["defender-left"] && (
-          <>
-            <img
-              className="player-picture"
-              src={playerState["defender-left"].img}
-            />
-            <p>{playerState["defender-left"].name}</p>
-          </>
-        )}
-      </div>
-      <div onClick={selectPosition} id="left-back" className="player" index="4">
-        {playerState["left-back"] && (
-          <>
-            <img
-              className="player-picture"
-              src={playerState["left-back"].img}
-            />
-            <p>{playerState["left-back"].name}</p>
-          </>
-        )}
-      </div>
-      <div onClick={selectPosition} id="midfielder-right" className="player">
-        {playerState["midfielder-right"] && (
-          <>
-            <img
-              className="player-picture"
-              src={playerState["midfielder-right"].img}
-            />
-            <p>{playerState["midfielder-right"].name}</p>
-          </>
-        )}
-      </div>
-      <div onClick={selectPosition} id="midfielder-left" className="player">
-        {playerState["midfielder-left"] && (
-          <>
-            <img
-              className="player-picture"
-              src={playerState["midfielder-left"].img}
-            />
-            <p>{playerState["midfielder-left"].name}</p>
-          </>
-        )}
-      </div>
       <div
+        
         onClick={selectPosition}
-        id="attacking-midfielder-right"
+        id="first"
         className="player"
       >
-        {playerState["attacking-midfielder-right"] && (
+        {playerState["first"] && (
           <>
-            <img
-              className="player-picture"
-              src={playerState["attacking-midfielder-right"].img}
-            />
-            <p>{playerState["attacking-midfielder-right"].name}</p>
+            <img className="player-picture" src={playerState["first"].img} />
+            <p>{playerState["first"].name}</p>
           </>
         )}
       </div>
-      <div
-        onClick={selectPosition}
-        id="attacking-midfielder-left"
-        className="player"
-      >
-        {playerState["attacking-midfielder-left"] && (
+      <div onClick={selectPosition} id="second" className="player">
+        {playerState["second"] && (
           <>
-            <img
-              className="player-picture"
-              src={playerState["attacking-midfielder-left"].img}
-            />
-            <p>{playerState["attacking-midfielder-left"].name}</p>
+            <img className="player-picture" src={playerState["second"].img} />
+            <p>{playerState["second"].name}</p>
           </>
         )}
       </div>
-      <div onClick={selectPosition} id="attacker-right" className="player">
-        {playerState["attacker-right"] && (
+      <div onClick={selectPosition} id="third" className="player">
+        {playerState["third"] && (
           <>
-            <img
-              className="player-picture"
-              src={playerState["attacker-right"].img}
-            />
-            <p>{playerState["attacker-right"].name}</p>
+            <img className="player-picture" src={playerState["third"].img} />
+            <p>{playerState["third"].name}</p>
           </>
         )}
       </div>
-      <div onClick={selectPosition} id="attacker-left" className="player">
-        {playerState["attacker-left"] && (
+      <div onClick={selectPosition} id="fourth" className="player">
+        {playerState["fourth"] && (
           <>
-            <img
-              className="player-picture"
-              src={playerState["attacker-left"].img}
-            />
-            <p>{playerState["attacker-left"].name}</p>
+            <img className="player-picture" src={playerState["fourth"].img} />
+            <p>{playerState["fourth"].name}</p>
+          </>
+        )}
+      </div>
+      <div onClick={selectPosition} id="fifth" className="player">
+        {playerState["fifth"] && (
+          <>
+            <img className="player-picture" src={playerState["fifth"].img} />
+            <p>{playerState["fifth"].name}</p>
+          </>
+        )}
+      </div>
+      <div onClick={selectPosition} id="sixth" className="player">
+        {playerState["sixth"] && (
+          <>
+            <img className="player-picture" src={playerState["sixth"].img} />
+            <p>{playerState["sixth"].name}</p>
+          </>
+        )}
+      </div>
+      <div onClick={selectPosition} id="seventh" className="player">
+        {playerState["seventh"] && (
+          <>
+            <img className="player-picture" src={playerState["seventh"].img} />
+            <p>{playerState["seventh"].name}</p>
+          </>
+        )}
+      </div>
+      <div onClick={selectPosition} id="eighth" className="player">
+        {playerState["eighth"] && (
+          <>
+            <img className="player-picture" src={playerState["eighth"].img} />
+            <p>{playerState["eighth"].name}</p>
+          </>
+        )}
+      </div>
+      <div onClick={selectPosition} id="ninth" className="player">
+        {playerState["ninth"] && (
+          <>
+            <img className="player-picture" src={playerState["ninth"].img} />
+            <p>{playerState["ninth"].name}</p>
+          </>
+        )}
+      </div>
+      <div onClick={selectPosition} id="tenth" className="player">
+        {playerState["tenth"] && (
+          <>
+            <img className="player-picture" src={playerState["tenth"].img} />
+            <p>{playerState["tenth"].name}</p>
+          </>
+        )}
+      </div>
+      <div onClick={selectPosition} id="eleventh" className="player">
+        {playerState["eleventh"] && (
+          <>
+            <img className="player-picture" src={playerState["eleventh"].img} />
+            <p>{playerState["eleventh"].name}</p>
           </>
         )}
       </div>
@@ -158,7 +123,7 @@ function Field({}) {
                 className="player-box"
               >
                 <img className="player-picture" src={player.img} />
-                <h1> {player.name}</h1>
+                <h3> {player.name}</h3>
                 <h5>#{player.num}</h5>
               </div>
             );
