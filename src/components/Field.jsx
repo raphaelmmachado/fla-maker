@@ -4,7 +4,7 @@ import { useState } from "react";
 function Field({}) {
   const [showPlayersContainer, setShowPlayersContainer] = useState(false);
   const [keyState, setKeyState] = useState("");
-  const [playerState, setPlayerState] = useState({});
+  const [playerState, setPlayerState] = useState({ });
 
   const selectPosition = (e) => {
     setShowPlayersContainer(true);
@@ -13,87 +13,188 @@ function Field({}) {
   };
   const selectPlayer = (player) => {
     setShowPlayersContainer(false);
-    const playerToAdd = {};
-    playerToAdd[keyState] = player;
-    setPlayerState(playerToAdd);
-    console.log(playerState)
+    
+    setPlayerState((prev) => {
+      return { ...prev,
+        [keyState]:player	
+       };
+    });
+    
   };
   return (
-    <div className="field">
+    <main className="field">
       <div
         onClick={selectPosition}
         id="goalkeeper"
         index="0"
         className="player"
       >
-      {playerState[keyState] &&
+        {playerState["goalkeeper"] && (
           <>
-            {" "}
-            <img className="player-picture"src={playerState[keyState].img} />
-            <p>{playerState[keyState].name}</p>
-          </>}
-        
+            <img
+              className="player-picture"
+              src={playerState["goalkeeper"].img}
+            />
+            <p>{playerState["goalkeeper"].name}</p>
+          </>
+        )}
       </div>
       <div
         onClick={selectPosition}
         index="1"
         id="right-back"
         className="player"
-      ></div>
+      >
+        {playerState["right-back"] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["right-back"].img}
+            />
+            <p>{playerState["right-back"].name}</p>
+          </>
+        )}
+      </div>
       <div
         onClick={selectPosition}
         index="2"
         id="defender-right"
         className="player"
-      ></div>
+      >
+        {playerState["defender-right"] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["defender-right"].img}
+            />
+            <p>{playerState["defender-right"].name}</p>
+          </>
+        )}
+      </div>
       <div
         onClick={selectPosition}
         id="defender-left"
         index="3"
         className="player"
-      ></div>
-      <div
-        onClick={selectPosition}
-        id="left-back"
-        className="player"
-        index="4"
-      ></div>
+      >
+        {playerState["defender-left"] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["defender-left"].img}
+            />
+            <p>{playerState["defender-left"].name}</p>
+          </>
+        )}
+      </div>
+      <div onClick={selectPosition} id="left-back" className="player" index="4">
+        {playerState["left-back" ] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["left-back"].img}
+            />
+            <p>{playerState["left-back"].name}</p>
+          </>
+        )}
+      </div>
       <div
         onClick={selectPosition}
         id="midfielder-right"
         className="player"
         index="5"
-      ></div>
+      >
+        {playerState["midfielder-right"] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["midfielder-right"].img}
+            />
+            <p>{playerState["midfielder-right"].name}</p>
+          </>
+        )}
+      </div>
       <div
         onClick={selectPosition}
         id="midfielder-left"
         className="player"
         index="6"
-      ></div>
+      >
+        {playerState["midfielder-left"] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["midfielder-left"].img}
+            />
+            <p>{playerState["midfielder-left"].name}</p>
+          </>
+        )}
+      </div>
       <div
         onClick={selectPosition}
         id="attacking-midfielder-right"
         className="player"
         index="7"
-      ></div>
+      >
+        {playerState["attacking-midfielder-right"] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["attacking-midfielder-right"].img}
+            />
+            <p>{playerState["attacking-midfielder-right"].name}</p>
+          </>
+        )}
+      </div>
       <div
         onClick={selectPosition}
         id="attacking-midfielder-left"
         className="player"
         index="8"
-      ></div>
+      >
+        {playerState["attacking-midfielder-left"] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["attacking-midfielder-left"].img}
+            />
+            <p>{playerState["attacking-midfielder-left"].name}</p>
+          </>
+        )}
+      </div>
       <div
         onClick={selectPosition}
         id="attacker-right"
         className="player"
         index="9"
-      ></div>
+      >
+        {playerState["attacker-right"] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["attacker-right"].img}
+            />
+            <p>{playerState["attacker-right"].name}</p>
+          </>
+        )}
+      </div>
       <div
         onClick={selectPosition}
         id="attacker-left"
         className="player"
         index="10"
-      ></div>
+      >
+        {playerState["attacker-left"] && (
+          <>
+            <img
+              className="player-picture"
+              src={playerState["attacker-left"].img}
+            />
+            <p>{playerState["attacker-left"].name}</p>
+          </>
+        )}
+      </div>
+
       {showPlayersContainer && (
         <div className="players-container">
           {players.map((player, index) => {
@@ -111,7 +212,7 @@ function Field({}) {
           })}
         </div>
       )}
-    </div>
+    </main>
   );
 }
 export { Field };
