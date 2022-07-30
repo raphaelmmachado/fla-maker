@@ -115,6 +115,8 @@ function Field({}) {
 
       {showPlayersContainer && (
         <div className="players-container">
+          <>
+          <div className="close-button"onClick={()=> setShowPlayersContainer(false)}></div>
           {players.map((player, index) => {
             return (
               <div
@@ -128,6 +130,8 @@ function Field({}) {
               </div>
             );
           })}
+          
+          </>
         </div>
       )}
     </main>
