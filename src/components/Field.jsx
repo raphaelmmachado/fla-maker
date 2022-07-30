@@ -4,31 +4,21 @@ import { useState } from "react";
 function Field({}) {
   const [showPlayersContainer, setShowPlayersContainer] = useState(false);
   const [keyState, setKeyState] = useState("");
-  const [playerState, setPlayerState] = useState({ });
+  const [playerState, setPlayerState] = useState({});
 
   const selectPosition = (e) => {
     setShowPlayersContainer(true);
     setKeyState(e.target.id);
-    // setIndexState(Number(e.currentTarget.getAttribute("index")));
   };
   const selectPlayer = (player) => {
     setShowPlayersContainer(false);
-    
     setPlayerState((prev) => {
-      return { ...prev,
-        [keyState]:player	
-       };
+      return { ...prev, [keyState]: player };
     });
-    
   };
   return (
     <main className="field">
-      <div
-        onClick={selectPosition}
-        id="goalkeeper"
-        index="0"
-        className="player"
-      >
+      <div onClick={selectPosition} id="goalkeeper" className="player">
         {playerState["goalkeeper"] && (
           <>
             <img
@@ -39,12 +29,7 @@ function Field({}) {
           </>
         )}
       </div>
-      <div
-        onClick={selectPosition}
-        index="1"
-        id="right-back"
-        className="player"
-      >
+      <div onClick={selectPosition} id="right-back" className="player">
         {playerState["right-back"] && (
           <>
             <img
@@ -55,12 +40,7 @@ function Field({}) {
           </>
         )}
       </div>
-      <div
-        onClick={selectPosition}
-        index="2"
-        id="defender-right"
-        className="player"
-      >
+      <div onClick={selectPosition} id="defender-right" className="player">
         {playerState["defender-right"] && (
           <>
             <img
@@ -71,12 +51,7 @@ function Field({}) {
           </>
         )}
       </div>
-      <div
-        onClick={selectPosition}
-        id="defender-left"
-        index="3"
-        className="player"
-      >
+      <div onClick={selectPosition} id="defender-left" className="player">
         {playerState["defender-left"] && (
           <>
             <img
@@ -88,7 +63,7 @@ function Field({}) {
         )}
       </div>
       <div onClick={selectPosition} id="left-back" className="player" index="4">
-        {playerState["left-back" ] && (
+        {playerState["left-back"] && (
           <>
             <img
               className="player-picture"
@@ -98,12 +73,7 @@ function Field({}) {
           </>
         )}
       </div>
-      <div
-        onClick={selectPosition}
-        id="midfielder-right"
-        className="player"
-        index="5"
-      >
+      <div onClick={selectPosition} id="midfielder-right" className="player">
         {playerState["midfielder-right"] && (
           <>
             <img
@@ -114,12 +84,7 @@ function Field({}) {
           </>
         )}
       </div>
-      <div
-        onClick={selectPosition}
-        id="midfielder-left"
-        className="player"
-        index="6"
-      >
+      <div onClick={selectPosition} id="midfielder-left" className="player">
         {playerState["midfielder-left"] && (
           <>
             <img
@@ -134,7 +99,6 @@ function Field({}) {
         onClick={selectPosition}
         id="attacking-midfielder-right"
         className="player"
-        index="7"
       >
         {playerState["attacking-midfielder-right"] && (
           <>
@@ -150,7 +114,6 @@ function Field({}) {
         onClick={selectPosition}
         id="attacking-midfielder-left"
         className="player"
-        index="8"
       >
         {playerState["attacking-midfielder-left"] && (
           <>
@@ -162,12 +125,7 @@ function Field({}) {
           </>
         )}
       </div>
-      <div
-        onClick={selectPosition}
-        id="attacker-right"
-        className="player"
-        index="9"
-      >
+      <div onClick={selectPosition} id="attacker-right" className="player">
         {playerState["attacker-right"] && (
           <>
             <img
@@ -178,12 +136,7 @@ function Field({}) {
           </>
         )}
       </div>
-      <div
-        onClick={selectPosition}
-        id="attacker-left"
-        className="player"
-        index="10"
-      >
+      <div onClick={selectPosition} id="attacker-left" className="player">
         {playerState["attacker-left"] && (
           <>
             <img
