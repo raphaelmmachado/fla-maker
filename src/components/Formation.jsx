@@ -4,6 +4,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="first"
+        position="first"
         className="player"
         style={styles.first}
       >
@@ -18,6 +19,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="second"
+        position="second"
         className="player"
         style={styles.second}
       >
@@ -32,6 +34,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="third"
+        position="third"
         className="player"
         style={styles.third}
       >
@@ -45,6 +48,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="fourth"
+        position="fourth"
         className="player"
         style={styles.fourth}
       >
@@ -58,6 +62,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="fifth"
+        position="fifth"
         className="player"
         style={styles.fifth}
       >
@@ -71,6 +76,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="sixth"
+        position="sixth"
         className="player"
         style={styles.sixth}
       >
@@ -85,6 +91,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="seventh"
+        position="seventh"
         className="player"
         style={styles.seventh}
       >
@@ -99,6 +106,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="eighth"
+        position="eighth"
         className="player"
         style={styles.eighth}
       >
@@ -113,6 +121,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="ninth"
+        position="ninth"
         className="player"
         style={styles.ninth}
       >
@@ -127,6 +136,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="tenth"
+        position="tenth"
         className="player"
         style={styles.tenth}
       >
@@ -141,6 +151,7 @@ function Formation({ selectPosition, playerState, styles }) {
       <div
         onClick={selectPosition}
         id="eleventh"
+        position="eleventh"
         className="player"
         style={styles.eleventh}
       >

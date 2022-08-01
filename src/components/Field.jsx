@@ -7,18 +7,20 @@ function Field({ formation }) {
   const [showPlayersContainer, setShowPlayersContainer] = useState(false);
   const [keyState, setKeyState] = useState("");
   const [playerState, setPlayerState] = useState({});
-  // document.body.addEventListener("click", setShowPlayersContainer(false))
+  console.log(keyState)
   const selectPosition = (e) => {
+    const position = e.target.getAttribute("position")
     setShowPlayersContainer(true);
-    setKeyState(e.target.id);
+    // quando clicava no mesmo position se transformava em null
+    setKeyState(prev=> !position ? prev : position); 
   };
   const selectPlayer = (player) => {
     setShowPlayersContainer(false);
     setPlayerState((prev) => {
-      return { ...prev, [keyState]: player };
+      return { ...prev, [keyState]:player };
     });
   };
-  const handleClick = (e) => {
+  const goBack = (e) => {
     if (e.target.id === "field") setShowPlayersContainer(false);
     return;
   };
@@ -40,7 +42,7 @@ function Field({ formation }) {
     }
   }, [formation]);
   return (
-    <main className="field" id="field" onClick={handleClick}>
+    <main className="field" id="field" onClick={goBack}>
       <Formation
         selectPosition={selectPosition}
         playerState={playerState}
@@ -48,7 +50,7 @@ function Field({ formation }) {
       />
 
       {showPlayersContainer && (
-        <Select selectPlayer={(player) => selectPlayer(player)} close={()=> setShowPlayersContainer(false)}/>
+        <Select selectPlayer={selectPlayer} close={()=> setShowPlayersContainer(false)}/>
       )}
     </main>
   );
