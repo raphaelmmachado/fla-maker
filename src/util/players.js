@@ -56,7 +56,7 @@ const players = [
   },
   {
     name: "Pulgar",
-    num: 12,
+    num: 5,
     img: "https://img.a.transfermarkt.technology/portrait/big/215616-1643971374.png?lm=1"
   },
   {
@@ -118,6 +118,26 @@ const players = [
     name: "Hugo Neneca",
     num: 45,
     img: "https://img.a.transfermarkt.technology/portrait/big/574901-1541567933.jpg?lm=1"
+  },
+  {
+    name: "Marinho",
+    num: 31,
+    img: "https://img.a.transfermarkt.technology/portrait/big/74758-1558620761.jpg?lm=1"
+  },
+  {
+    name: "Diego Ribas",
+    num: 10,
+    img: "https://img.a.transfermarkt.technology/portrait/big/4248-1506074640.jpg?lm=1"
+  },
+  {
+    name: "Matheus França",
+    num: 42,
+    img: "https://img.a.transfermarkt.technology/portrait/big/743597-1626626932.jpg?lm=1"
+  },
+  {
+    name: "Guilhermo Varela",
+    num: 17,
+    img: "https://img.a.transfermarkt.technology/portrait/big/188862-1605115531.png?lm=1"
   }
 ];
 const sortedPlayers = players.sort((a,b)=> a.num - b.num)

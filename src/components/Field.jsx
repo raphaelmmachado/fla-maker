@@ -2,12 +2,12 @@ import "./formation.css";
 import { Select } from "./Select";
 import { Formation } from "./Formation";
 import { useEffect, useState } from "react";
-import { fourfourtwo, fourthreethree, threefivetwo } from "./util/positions"
-function Field({formation}) {
+import { fourfourtwo, fourthreethree, threefivetwo } from "../util/positions";
+function Field({ formation }) {
   const [showPlayersContainer, setShowPlayersContainer] = useState(false);
   const [keyState, setKeyState] = useState("");
   const [playerState, setPlayerState] = useState({});
-
+  // document.body.addEventListener("click", setShowPlayersContainer(false))
   const selectPosition = (e) => {
     setShowPlayersContainer(true);
     setKeyState(e.target.id);
@@ -18,8 +18,12 @@ function Field({formation}) {
       return { ...prev, [keyState]: player };
     });
   };
-  const [checkFormation, setCheckFormation] = useState("")
-  useEffect(()=>{
+  const handleClick = (e) => {
+    if (e.target.id === "field") setShowPlayersContainer(false);
+    return;
+  };
+  const [checkFormation, setCheckFormation] = useState("");
+  useEffect(() => {
     switch (formation) {
       case "fourfourtwo":
         setCheckFormation(fourfourtwo);
@@ -31,19 +35,24 @@ function Field({formation}) {
         setCheckFormation(threefivetwo);
         return;
       default:
-        setCheckFormation(fourfourtwo)
+        setCheckFormation(fourfourtwo);
         break;
     }
-  },[formation])
+  }, [formation]);
   return (
-    <main className="field">
-
-      <Formation selectPosition={selectPosition} playerState={playerState} styles={checkFormation}/>
+    <main className="field" id="field" onClick={handleClick}>
+      <Formation
+        selectPosition={selectPosition}
+        playerState={playerState}
+        styles={checkFormation}
+      />
 
       {showPlayersContainer && (
-        <Select selectPlayer={(player) => selectPlayer(player)} />
+        <Select selectPlayer={(player) => selectPlayer(player)} close={()=> setShowPlayersContainer(false)}/>
       )}
     </main>
   );
 }
+
+
 export { Field };
