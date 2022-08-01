@@ -1,5 +1,5 @@
 const fourfourtwo = {
-    first: { top: "1%", left: "47%" },
+    first: { top: "1%", left: "45%" },
     second: { top: "22%", left: "5%" },
     third: { top: "22%", left: "78%" },
     fourth: { top: "10%", left: "25%" },

@@ -5,26 +5,28 @@ import { useEffect, useState } from "react";
 import { fourfourtwo, fourthreethree, threefivetwo } from "../util/positions";
 function Field({ formation }) {
   const [showPlayersContainer, setShowPlayersContainer] = useState(false);
-  const [keyState, setKeyState] = useState("");
-  const [playerState, setPlayerState] = useState({});
-  console.log(keyState)
+  const [clickedCircle, setClickedCircle] = useState("");
+  const [selectedPlayers, setSelectedPlayers] = useState({});
+  const [checkFormation, setCheckFormation] = useState("");
+  console.log(selectedPlayers);
   const selectPosition = (e) => {
-    const position = e.target.getAttribute("position")
+    const circleID = e.currentTarget.id;
     setShowPlayersContainer(true);
-    // quando clicava no mesmo position se transformava em null
-    setKeyState(prev=> !position ? prev : position); 
+    setClickedCircle(circleID);
   };
   const selectPlayer = (player) => {
     setShowPlayersContainer(false);
-    setPlayerState((prev) => {
-      return { ...prev, [keyState]:player };
+    const valueExists = Object.values(selectedPlayers).includes(player)
+    if (valueExists) return
+    setSelectedPlayers((prevSelected) => {
+      return { ...prevSelected, [clickedCircle]: player };
     });
   };
   const goBack = (e) => {
     if (e.target.id === "field") setShowPlayersContainer(false);
     return;
   };
-  const [checkFormation, setCheckFormation] = useState("");
+
   useEffect(() => {
     switch (formation) {
       case "fourfourtwo":
@@ -41,20 +43,23 @@ function Field({ formation }) {
         break;
     }
   }, [formation]);
+
   return (
     <main className="field" id="field" onClick={goBack}>
       <Formation
         selectPosition={selectPosition}
-        playerState={playerState}
+        selectedPlayers={selectedPlayers}
         styles={checkFormation}
       />
 
       {showPlayersContainer && (
-        <Select selectPlayer={selectPlayer} close={()=> setShowPlayersContainer(false)}/>
+        <Select
+          selectPlayer={selectPlayer}
+          close={() => setShowPlayersContainer(false)}
+        />
       )}
     </main>
   );
 }
-
 
 export { Field };
