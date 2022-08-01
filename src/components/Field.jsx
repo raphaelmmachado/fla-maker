@@ -8,7 +8,7 @@ function Field({ formation }) {
   const [clickedCircle, setClickedCircle] = useState("");
   const [selectedPlayers, setSelectedPlayers] = useState({});
   const [checkFormation, setCheckFormation] = useState("");
-  console.log(selectedPlayers);
+
   const selectPosition = (e) => {
     const circleID = e.currentTarget.id;
     setShowPlayersContainer(true);
