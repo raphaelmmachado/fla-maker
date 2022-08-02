@@ -1,3 +1,13 @@
+:root{
+  --blue: rgb(61, 184, 255);
+  --red: #a11f1f;
+  --red-hover: rgb(192, 65, 65);
+  --black: rgba(87, 87, 87, 0.733);
+  --black-lighter: rgb(37, 37, 37);
+  --bar-transparent: rgba(41, 40, 40, 0.404);
+  --black-darker: rgb(19, 19, 19);
+  --font-color: rgb(230, 230, 230);
+}
 body {
   background-color: rgb(198, 245, 241);
   display: grid;
@@ -53,50 +63,70 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 254, 254, 0.815);
-  width: 280px;
-  border: 1px solid rgb(54, 1, 1);
+  background-color: var(--red);
+  width: 278px;
+  border: 1px solid var(--black);
   border-radius: 5px;
   font-family: var(--font);
-  color: rgb(24, 24, 24);
+  color: var(--font-color);
   padding: 2px;
+  margin: 1px;
 }
 .player-box:hover {
   cursor: pointer;
-  background-color: bisque;
+  background-color: var(--red-hover);
 }
 .player-picture {
   display: block;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid rgb(143, 17, 17);
+  border: 2px solid var(--black-darker);
 }
 .close{
   display: flex;
-  flex-direction: row;
-  color: rgb(17, 17, 17);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   top: 0;
   left: 5%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 32px;
 }
-
-.close img:hover {
+.go-back{
+  font-size: 9px;
+  color: var(--black-lighter);
+}
+.default-cursor{
+  cursor:default;
+}
+.close:hover {
   cursor: pointer;
+
+}
+.position-title{
+  text-align: center;
+  background-color: var(--black-lighter);
+  color: white;
 }
 ::-webkit-scrollbar {
   width: 10px;
+ 
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
+  
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(49, 49, 49);
+  background: var(--bar-transparent);
   border-radius: 10px;
+  
 }
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #6e1212f1;
+::-webkit-scrollbar-thumb:active {
+  background: var(--black-darker)
 }
 
 @media screen and (max-width: 320px) {

@@ -1,6 +1,6 @@
 import { sortedPlayers as players } from "../util/players";
 import closeImg from "../assets/goback.svg";
-
+import arrowUp from "../assets/arrow-up.svg"
 function Select({ selectPlayer, close }) {
   const goalKeepers = players.filter((player) => player.pos === "G");
   const sideBacks = players.filter((player) => player.pos === "L");
@@ -11,29 +11,28 @@ function Select({ selectPlayer, close }) {
   return (
     <div className="players-container">
       <div onClick={() => close()} className="close">
-        <img src={closeImg} />
+        <div><img src={arrowUp} /></div>
+        <div className="go-back">VOLTAR</div>
       </div>
-      <div>GOLEIROS</div>
-      {goalKeepers.map((player, index) => {
+      <div className="position-title">GOLEIROS</div>
+      {goalKeepers.map((player) => {
         return (
-          <>
             <div
-              key={index}
+              key={player.num}
               onClick={() => selectPlayer(player)}
               className="player-box"
             >
               <img className="player-picture" src={player.img} />
               <h3> {player.name}</h3>
               <h5>#{player.num}</h5>
-            </div>
-          </>
+            </div>  
         );
       })}
-      <div>ZAGUEIROS</div>
-      {defenders.map((player, index) => {
+      <div className="position-title">ZAGUEIROS</div>
+      {defenders.map((player) => {
         return (
           <div
-            key={index}
+            key={player.num}
             onClick={() => selectPlayer(player)}
             className="player-box"
           >
@@ -43,11 +42,11 @@ function Select({ selectPlayer, close }) {
           </div>
         );
       })}
-      <div>LATERAIS</div>
-      {sideBacks.map((player, index) => {
+      <div className="position-title">LATERAIS</div>
+      {sideBacks.map((player) => {
         return (
           <div
-            key={index}
+            key={player.num}
             onClick={() => selectPlayer(player)}
             className="player-box"
           >
@@ -57,11 +56,11 @@ function Select({ selectPlayer, close }) {
           </div>
         );
       })}
-      <div>MEIOS-CAMPOS</div>
-      {midfielders.map((player, index) => {
+      <div className="position-title">MEIOS-CAMPOS</div>
+      {midfielders.map((player) => {
         return (
           <div
-            key={index}
+            key={player.num}
             onClick={() => selectPlayer(player)}
             className="player-box"
           >
@@ -71,11 +70,11 @@ function Select({ selectPlayer, close }) {
           </div>
         );
       })}
-      <div>ATACANTES</div>
-      {attackers.map((player, index) => {
+      <div className="position-title">ATACANTES</div>
+      {attackers.map((player) => {
         return (
           <div
-            key={index}
+            key={player.num}
             onClick={() => selectPlayer(player)}
             className="player-box"
           >

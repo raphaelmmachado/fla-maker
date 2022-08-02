@@ -1,4 +1,5 @@
-function Formation({ selectPosition, selectedPlayers, styles }) {
+import closeSVG from "../assets/close.svg";
+function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
   return (
     <>
       <div
@@ -13,7 +14,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["first"].img}
             />
-            <p>{selectedPlayers["first"].name}</p>
+            <p className="default-cursor">{selectedPlayers["first"].name}</p>
+            <img
+              value="first"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -30,7 +38,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["second"].img}
             />
-            <p>{selectedPlayers["second"].name}</p>
+            <p className="default-cursor">{selectedPlayers["second"].name}</p>
+            <img
+              value="second"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -47,7 +62,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["third"].img}
             />
-            <p>{selectedPlayers["third"].name}</p>
+            <p className="default-cursor">{selectedPlayers["third"].name}</p>
+            <img
+              value="third"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -63,7 +85,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["fourth"].img}
             />
-            <p>{selectedPlayers["fourth"].name}</p>
+            <p className="default-cursor">{selectedPlayers["fourth"].name}</p>
+            <img
+              value="fourth"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -79,7 +108,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["fifth"].img}
             />
-            <p>{selectedPlayers["fifth"].name}</p>
+            <p className="default-cursor">{selectedPlayers["fifth"].name}</p>
+            <img
+              value="fifth"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -95,7 +131,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["sixth"].img}
             />
-            <p>{selectedPlayers["sixth"].name}</p>
+            <p className="default-cursor">{selectedPlayers["sixth"].name}</p>
+            <img
+              value="sixth"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -112,7 +155,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["seventh"].img}
             />
-            <p>{selectedPlayers["seventh"].name}</p>
+            <p className="default-cursor">{selectedPlayers["seventh"].name}</p>
+            <img
+              value="seventh"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -129,7 +179,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["eighth"].img}
             />
-            <p>{selectedPlayers["eighth"].name}</p>
+            <p className="default-cursor">{selectedPlayers["eighth"].name}</p>
+            <img
+              value="eighth"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -146,7 +203,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["ninth"].img}
             />
-            <p>{selectedPlayers["ninth"].name}</p>
+            <p className="default-cursor">{selectedPlayers["ninth"].name}</p>
+            <img
+              value="ninth"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -163,7 +227,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["tenth"].img}
             />
-            <p>{selectedPlayers["tenth"].name}</p>
+            <p className="default-cursor">{selectedPlayers["tenth"].name}</p>
+            <img
+              value="tenth"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
@@ -180,7 +251,14 @@ function Formation({ selectPosition, selectedPlayers, styles }) {
               className="player-picture"
               src={selectedPlayers["eleventh"].img}
             />
-            <p>{selectedPlayers["eleventh"].name}</p>
+            <p className="default-cursor">{selectedPlayers["eleventh"].name}</p>
+            <img
+              value="eleventh"
+              clear="true"
+              className="default-cursor"
+              src={closeSVG}
+              onClick={clearPlayer}
+            />
           </>
         )}
       </div>
