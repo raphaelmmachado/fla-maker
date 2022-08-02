@@ -9,7 +9,7 @@ function Field({ formation }) {
   const [clickedCircle, setClickedCircle] = useState("");
   const [selectedPlayers, setSelectedPlayers] = useState({});
   const [checkFormation, setCheckFormation] = useState("");
-  
+
   const selectPosition = (e) => {
     if (e.target.getAttribute("clear") === "true") return
     const circleID = e.currentTarget.id;

@@ -12,7 +12,7 @@ function Select({ selectPlayer, close }) {
     <div className="players-container">
       <div onClick={() => close()} className="close">
         <div><img src={arrowUp} /></div>
-        <div className="go-back">VOLTAR</div>
+        <div className="go-back"></div>
       </div>
       <div className="position-title">GOLEIROS</div>
       {goalKeepers.map((player) => {
