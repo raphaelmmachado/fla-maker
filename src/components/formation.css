@@ -32,7 +32,7 @@ body {
   position: relative;
   display: grid;
   place-items: center;
-  background-image: url("../assets/field.svg");
+  background-image: url("../assets/campo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgb(12, 107, 12);

@@ -24,7 +24,7 @@ function Field({ formation }) {
       return { ...prevSelected, [clickedCircle]: player };
     });
   };
-  const clearPlayer = (e)=> {
+  const clearPlayer = async (e)=> {
     const circleID = e.target.getAttribute("value")
     setClickedCircle(circleID)
     if (circleID !== clickedCircle) return
