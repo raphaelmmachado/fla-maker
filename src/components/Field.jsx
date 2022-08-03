@@ -69,6 +69,8 @@ function Field({ formation }) {
           close={() => setShowPlayersContainer(false)}
         />
       )}
+      
+       
     </main>
   );
 }

@@ -1,9 +1,9 @@
 const fourfourtwo = {
-    first: { top: "1%", left: "45%" },
-    second: { top: "22%", left: "5%" },
+    first: { top: "1%", left: "42.5%" },
+    second: { top: "22%", left: "7%" },
     third: { top: "22%", left: "78%" },
     fourth: { top: "10%", left: "25%" },
-    fifth: { top: "10%", left: "65%" },
+    fifth: { top: "10%", left: "60%" },
     sixth: { top: " 40%", left: "20%" },
     seventh: { top: "40%", left: "65%" },
     eighth: { top: "60%", left: "10%" },
@@ -12,11 +12,11 @@ const fourfourtwo = {
     eleventh: { top: "80%", left: "60%" },
   };
 const fourthreethree = {
-    first: { top: "1%", left: "45%" },
-    second: { top: "22%", left: "5%" },
+    first: { top: "1%", left: "42.5%" },
+    second: { top: "22%", left: "7%" },
     third: { top: "22%", left: "78%" },
     fourth: { top: "10%", left: "25%" },
-    fifth: { top: "10%", left: "65%" },
+    fifth: { top: "10%", left: "60%" },
     sixth: { top: " 40%", left: "42%" },
     seventh: { top: "55%", left: "69%" },
     eighth: { top: "55%", left: "15%" },
@@ -25,16 +25,16 @@ const fourthreethree = {
     eleventh: { top: "80%", left: "42%" },
 }
 const threefivetwo = {
-    first: { top: "1%", left: "45%" },
+    first: { top: "1%", left: "42.5%" },
     second: { top: "15%", left: "10%" },
     third: { top: "35%", left: "5%" },
-    fourth: { top: "15%", left: "45%" },
+    fourth: { top: "15%", left: "42.5%" },
     fifth: { top: "15%", left: "75%" },
     sixth: { top: " 35%", left: "78%" },
-    seventh: { top: "45%", left: "44%" },
+    seventh: { top: "40%", left: "42.5%" },
     eighth: { top: "60%", left: "15%" },
-    ninth: { top: "60%", left: "75%" },
-    tenth: { top: "80%", left: "30%" },
+    ninth: { top: "60%", left: "70%" },
+    tenth: { top: "80%", left: "25%" },
     eleventh: { top: "80%", left: "60%" },
 }  
 export {fourfourtwo, fourthreethree, threefivetwo}  

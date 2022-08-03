@@ -28,6 +28,15 @@ body {
   text-align: center;
   color: rgba(85, 85, 85, 0.747);
 }
+select{
+  background-color: transparent;
+  border-radius: 10px;
+}
+.select-formation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .field {
   position: relative;
   display: grid;
@@ -61,12 +70,13 @@ body {
 
 .clear{
   position: absolute;
-  top:0;
-  right: 95%;
+  top:60%;
+  left: 99%;
 }
 .player p {
   font-size: 11px;
   font-weight: 400;
+  max-width: 50px;
   color: var(--font-color);
 }
 .player:hover {
