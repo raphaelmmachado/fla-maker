@@ -1,4 +1,4 @@
-:root{
+:root {
   --blue: rgb(61, 184, 255);
   --red: #a11f1f;
   --red-hover: rgb(192, 65, 65);
@@ -14,27 +14,27 @@ body {
   place-items: center;
   min-height: 100vh;
 }
-.header{
+.header {
   margin: 1em;
 }
-#title{
+#title {
   text-align: center;
   margin: 0;
 }
-.red-text{
+.red-text {
   color: var(--red);
 }
-.description{
+.description {
   text-align: center;
   color: rgba(85, 85, 85, 0.747);
 }
-select{
+select {
   background-color: transparent;
   border: 2px solid var(--black-darker);
   border-radius: 10px;
-  margin: 1px
+  margin: 1px;
 }
-.select-formation{
+.select-formation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -65,14 +65,14 @@ select{
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
- 
+
   height: 50px;
   width: 50px;
 }
 
-.clear{
+.clear {
   position: absolute;
-  top:60%;
+  top: 60%;
   left: 99%;
 }
 .player p {
@@ -116,7 +116,7 @@ select{
   border-radius: 50%;
   border: 3px solid var(--red);
 }
-.close{
+.close {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,23 +127,22 @@ select{
   border-top-right-radius: 10px;
   height: 32px;
 }
-.go-back{
+.go-back {
   font-size: 9px;
   color: var(--black-lighter);
 }
-.default-cursor{
-  cursor:default;
+.default-cursor {
+  cursor: default;
 }
 .close:hover {
   cursor: pointer;
-
 }
-.position-title{
+.position-title {
   text-align: center;
   background-color: var(--black-lighter);
   color: white;
 }
-footer{
+footer {
   margin-top: 1rem;
   font-size: small;
 }
@@ -153,26 +152,33 @@ footer span {
   justify-content: center;
   align-items: center;
 }
-footer a{
+footer a {
   color: var(--black);
   text-decoration: none;
 }
 ::-webkit-scrollbar {
   width: 10px;
- 
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
-  
 }
 ::-webkit-scrollbar-thumb {
   background: var(--bar-transparent);
   border-radius: 10px;
-  
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:active {
-  background: rgba(84, 131, 153, 0.795)
+  background: rgba(84, 131, 153, 0.795);
 }
-
+@media screen and (max-height: 537px) and (max-width: 650px) {
+  .header {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    height: 537px;
+  }
+  .arrow-down {
+    margin-top: 3rem;
+  }
+}
