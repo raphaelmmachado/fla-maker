@@ -18,8 +18,8 @@ function Field({ formation }) {
   };
   const selectPlayer = (player) => {
     setShowPlayersContainer(false);
-    const valueExists = Object.values(selectedPlayers).includes(player)
-    if (valueExists) return
+    const playerAlreadySelected = Object.values(selectedPlayers).includes(player)
+    if (playerAlreadySelected) return
     setSelectedPlayers((prevSelected) => {
       return { ...prevSelected, [clickedCircle]: player };
     });

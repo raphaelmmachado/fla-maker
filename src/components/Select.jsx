@@ -1,6 +1,6 @@
 import { sortedPlayers as players } from "../util/players";
-import closeImg from "../assets/goback.svg";
-import arrowUp from "../assets/arrow-up.svg"
+import closeImg from "../assets/icons/goback.svg";
+import arrowUp from "../assets/icons/arrow-up.svg"
 function Select({ selectPlayer, close }) {
   const goalKeepers = players.filter((player) => player.pos === "G");
   const sideBacks = players.filter((player) => player.pos === "L");

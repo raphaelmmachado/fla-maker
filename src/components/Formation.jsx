@@ -1,5 +1,7 @@
-import closeSVG from "../assets/close.svg";
+import { useState } from "react";
+import closeSVG from "../assets/icons/close.svg";
 function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
+  const [showClearButton,setShowClearButton] = useState(false)
   return (
     <>
       <div
@@ -9,19 +11,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.first}
       >
         {selectedPlayers["first"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["first"].img}
             />
             <p className="default-cursor">{selectedPlayers["first"].name}</p>
-            <img
+           {showClearButton && <img
               value="first"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -33,19 +35,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.second}
       >
         {selectedPlayers["second"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["second"].img}
             />
             <p className="default-cursor">{selectedPlayers["second"].name}</p>
-            <img
+            {showClearButton && <img
               value="second"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -57,19 +59,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.third}
       >
         {selectedPlayers["third"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["third"].img}
             />
             <p className="default-cursor">{selectedPlayers["third"].name}</p>
-            <img
+           {showClearButton && <img
               value="third"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -80,19 +82,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.fourth}
       >
         {selectedPlayers["fourth"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["fourth"].img}
             />
             <p className="default-cursor">{selectedPlayers["fourth"].name}</p>
-            <img
+           {showClearButton && <img
               value="fourth"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -103,19 +105,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.fifth}
       >
         {selectedPlayers["fifth"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["fifth"].img}
             />
             <p className="default-cursor">{selectedPlayers["fifth"].name}</p>
-            <img
+           {showClearButton && <img
               value="fifth"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -126,19 +128,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.sixth}
       >
         {selectedPlayers["sixth"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["sixth"].img}
             />
             <p className="default-cursor">{selectedPlayers["sixth"].name}</p>
-            <img
+          {showClearButton && <img
               value="sixth"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -150,19 +152,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.seventh}
       >
         {selectedPlayers["seventh"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["seventh"].img}
             />
             <p className="default-cursor">{selectedPlayers["seventh"].name}</p>
-            <img
+           {showClearButton && <img
               value="seventh"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -174,19 +176,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.eighth}
       >
         {selectedPlayers["eighth"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["eighth"].img}
             />
             <p className="default-cursor">{selectedPlayers["eighth"].name}</p>
-            <img
+           {showClearButton && <img
               value="eighth"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -198,19 +200,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.ninth}
       >
         {selectedPlayers["ninth"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["ninth"].img}
             />
             <p className="default-cursor ">{selectedPlayers["ninth"].name}</p>
-            <img
+           {showClearButton && <img
               value="ninth"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -222,19 +224,19 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.tenth}
       >
         {selectedPlayers["tenth"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
               className="player-picture"
               src={selectedPlayers["tenth"].img}
             />
             <p className="default-cursor ">{selectedPlayers["tenth"].name}</p>
-            <img
+           {showClearButton && <img
               value="tenth"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
@@ -246,19 +248,20 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         style={styles.eleventh}
       >
         {selectedPlayers["eleventh"] && (
-          <div className="player-circle">
+          <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
+              
               className="player-picture"
               src={selectedPlayers["eleventh"].img}
             />
             <p className="default-cursor ">{selectedPlayers["eleventh"].name}</p>
-            <img
+           {showClearButton && <img
               value="eleventh"
               clear="true"
               className="default-cursor clear"
               src={closeSVG}
               onClick={clearPlayer}
-            />
+            />}
           </div>
         )}
       </div>
