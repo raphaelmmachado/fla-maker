@@ -40,6 +40,9 @@ select {
   justify-content: space-between;
   align-items: center;
 }
+#print-do-campo{
+  text-align: end;
+}
 #copied-text{
   color: green;
   font-size: 12px;
@@ -161,6 +164,7 @@ footer {
   margin-top: 1rem;
   font-size: small;
   text-align: center;
+  max-width: 320px;
 }
 footer span {
   display: flex;
@@ -171,6 +175,7 @@ footer span {
 footer a {
   color: var(--black);
   text-decoration: none;
+  background-color: yellow;
 }
 ::-webkit-scrollbar {
   width: 10px;

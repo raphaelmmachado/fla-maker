@@ -27,6 +27,7 @@ import vidal from "../assets/players/vidal.jpg";
 import vitinho from "../assets/players/vitinho.jpg";
 import diegoalves from "../assets/players/diegoalves.jpg";
 import vitorhugo from "../assets/players/vitor_hugo.jpg";
+import oscar from "../assets/players/oscar.png"
 const players = [
   {
     name: "Gabigol",
@@ -239,6 +240,12 @@ const players = [
     num: 33,
     img: cleiton,
     pos: "D"
+  },
+  {
+    name: "Oscar",
+    num: 99,
+    img: oscar,
+    pos: "M"
   }
 ];
 const sortedPlayers = players.sort((a, b) => a.num - b.num);
