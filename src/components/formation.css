@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 }
 .header {
-  margin: 1em;
+  margin-bottom: 1rem;
 }
 #title {
   text-align: center;
@@ -38,10 +38,21 @@ select {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 #copied-text{
   color: green;
   font-size: 12px;
+}
+.take-screenshot:hover{
+  cursor: pointer;
+}
+.icons{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+   margin-top: 1rem;
 }
 .field {
   position: relative;
@@ -149,6 +160,7 @@ select {
 footer {
   margin-top: 1rem;
   font-size: small;
+  text-align: center;
 }
 footer span {
   display: flex;

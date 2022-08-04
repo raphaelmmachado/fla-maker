@@ -1,4 +1,3 @@
-import { TwitterShareButton, TwitterIcon } from "react-share";
 import { RiScreenshot2Line } from "react-icons/ri";
 function Options({ formationState, takeFieldScreenshot, copied }) {
   return (
@@ -12,19 +11,8 @@ function Options({ formationState, takeFieldScreenshot, copied }) {
         <option value="fourthreethree">4-3-3</option>
         <option value="threefivetwo">3-5-2</option>
       </select>
-      {copied && (
-        <div id="copied-text">Imagem copiada! (use Ctrl+V)</div>
-      )}
-      <div className="icons">
-        <RiScreenshot2Line size={20} onClick={takeFieldScreenshot} />
-        <TwitterShareButton
-          url="https://flamaker.netlify.app/"
-          title="Monte sua escalação do Flamengo"
-          hashtags={["flamengo", "flamaker"]}
-        >
-          <TwitterIcon size={20} round={true} />
-        </TwitterShareButton>{" "}
-      </div>
+      {copied && <div id="copied-text">Imagem do campo copiada!</div>}
+      <RiScreenshot2Line size={28} onClick={takeFieldScreenshot} className="take-screenshot" color={copied ? "green" : "black"}/>
     </div>
   );
 }

@@ -1,6 +1,7 @@
-import { Field } from "./components/Field";
-import { Options } from "./components/Options";
 import { Header } from "./components/Header";
+import { Options } from "./components/Options";
+import {Icons} from "./components/Icons"
+import { Field } from "./components/Field";
 import { Footer } from "./components/Footer";
 
 import { createRef, useState } from "react";
@@ -10,22 +11,22 @@ import { copyImageToClipboard } from "copy-image-clipboard";
 function App() {
   const ref = createRef(null);
   const [image, takeScreenshot] = useScreenshot();
-  const [copy,setCopy] = useState()
+  const [copy, setCopy] = useState();
 
   const takeFieldScreenshot = () => {
     takeScreenshot(ref.current);
+    if (!image) return;
     copyImageToClipboard(image)
       .then(() => {
-        console.log("Image Copied");
-        setCopy(true)
+        setCopy(true);
       })
       .catch((e) => {
-        alert("Erro ao copiar imagem")
+        alert("Falha ao tirar print do campo. Tente novamente!");
         console.log("Error: ", e.message);
       });
-      setTimeout(()=>setCopy(false), 3000)
+    setTimeout(() => setCopy(false), 3000);
   };
-  /*acima é novo */
+
   const [formation, setFormation] = useState("fourfourtwo");
   return (
     <div className="App" id="App">
@@ -36,10 +37,10 @@ function App() {
         screenshot={image}
         copied={copy}
       />
-  
       <div ref={ref}>
         <Field formation={formation} />
       </div>
+      <Icons/>
       <Footer />
     </div>
   );
