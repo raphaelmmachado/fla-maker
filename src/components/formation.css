@@ -39,6 +39,10 @@ select {
   flex-direction: row;
   justify-content: space-between;
 }
+#copied-text{
+  color: green;
+  font-size: 12px;
+}
 .field {
   position: relative;
   display: grid;

@@ -2,6 +2,7 @@ import "./formation.css";
 import { Select } from "./Select";
 import { Formation } from "./Formation";
 import { useEffect, useState } from "react";
+
 import { fourfourtwo, fourthreethree, threefivetwo } from "../util/positions";
 
 function Field({ formation }) {
