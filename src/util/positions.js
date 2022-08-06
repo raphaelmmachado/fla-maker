@@ -1,4 +1,4 @@
-const fourfourtwo = {
+const fourFourTwo = {
     first: { top: "1%", left: "42.5%" },
     second: { top: "22%", left: "7%" },
     third: { top: "22%", left: "78%" },
@@ -11,7 +11,20 @@ const fourfourtwo = {
     tenth: { top: "80%", left: "25%" },
     eleventh: { top: "80%", left: "60%" },
   };
-const fourthreethree = {
+const fourFourTwoLosangle = {
+    first: { top: "1%", left: "42.5%" },
+    second: { top: "22%", left: "7%" },
+    third: { top: "22%", left: "78%" },
+    fourth: { top: "10%", left: "25%" },
+    fifth: { top: "10%", left: "60%" },
+    sixth: { top: " 36%", left: "42.5%" },
+    seventh: { top: "49%", left: "70%" },
+    eighth: { top: "49%", left: "15%" },
+    ninth: { top: "60%", left: "42.5%" },
+    tenth: { top: "80%", left: "25%" },
+    eleventh: { top: "80%", left: "60%" },
+}
+const fourThreeThree = {
     first: { top: "1%", left: "42.5%" },
     second: { top: "22%", left: "7%" },
     third: { top: "22%", left: "78%" },
@@ -24,7 +37,7 @@ const fourthreethree = {
     tenth: { top: "80%", left: "10%" },
     eleventh: { top: "80%", left: "42%" },
 }
-const threefivetwo = {
+const threeFiveTwo = {
     first: { top: "1%", left: "42.5%" },
     second: { top: "15%", left: "10%" },
     third: { top: "35%", left: "5%" },
@@ -37,4 +50,4 @@ const threefivetwo = {
     tenth: { top: "80%", left: "25%" },
     eleventh: { top: "80%", left: "60%" },
 }  
-export {fourfourtwo, fourthreethree, threefivetwo}  
+export { fourFourTwo,fourFourTwoLosangle, fourThreeThree, threeFiveTwo}  

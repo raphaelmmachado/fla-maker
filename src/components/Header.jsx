@@ -5,7 +5,6 @@ function Header() {
   const [mobileScreen, setMobileScreen] = useState(false);
   useEffect(() => {
     window.addEventListener("resize", checkScreen);
-    if (mobileScreen) console.log("porra!");
   }, [mobileScreen]);
 
   const checkScreen = () =>

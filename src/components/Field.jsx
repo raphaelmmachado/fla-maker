@@ -3,7 +3,12 @@ import { Select } from "./Select";
 import { Formation } from "./Formation";
 import { useEffect, useState } from "react";
 
-import { fourfourtwo, fourthreethree, threefivetwo } from "../util/positions";
+import {
+  fourFourTwo,
+  fourFourTwoLosangle,
+  fourThreeThree,
+  threeFiveTwo,
+} from "../util/positions";
 
 function Field({ formation }) {
   const [showPlayersContainer, setShowPlayersContainer] = useState(false);
@@ -12,27 +17,28 @@ function Field({ formation }) {
   const [checkFormation, setCheckFormation] = useState("");
 
   const selectPosition = (e) => {
-    if (e.target.getAttribute("clear") === "true") return
+    if (e.target.getAttribute("clear") === "true") return;
     const circleID = e.currentTarget.id;
     setShowPlayersContainer(true);
     setClickedCircle(circleID);
   };
   const selectPlayer = (player) => {
     setShowPlayersContainer(false);
-    const playerAlreadySelected = Object.values(selectedPlayers).includes(player)
-    if (playerAlreadySelected) return
+    const playerAlreadySelected =
+      Object.values(selectedPlayers).includes(player);
+    if (playerAlreadySelected) return;
     setSelectedPlayers((prevSelected) => {
       return { ...prevSelected, [clickedCircle]: player };
     });
   };
-  const clearPlayer = async (e)=> {
-    const circleID = e.target.getAttribute("value")
-    setClickedCircle(circleID)
-    if (circleID !== clickedCircle) return
-    setSelectedPlayers((prevSelected)=> {
-      return {...prevSelected, [clickedCircle]:null}
-    })
-  }
+  const clearPlayer = async (e) => {
+    const circleID = e.target.getAttribute("value");
+    setClickedCircle(circleID);
+    if (circleID !== clickedCircle) return;
+    setSelectedPlayers((prevSelected) => {
+      return { ...prevSelected, [clickedCircle]: null };
+    });
+  };
   const goBack = (e) => {
     if (e.target.id === "field") setShowPlayersContainer(false);
     return;
@@ -41,16 +47,19 @@ function Field({ formation }) {
   useEffect(() => {
     switch (formation) {
       case "fourfourtwo":
-        setCheckFormation(fourfourtwo);
+        setCheckFormation(fourFourTwo);
         return;
+      case "fourfourtwolosangle":
+        setCheckFormation(fourFourTwoLosangle);
+        return
       case "fourthreethree":
-        setCheckFormation(fourthreethree);
+        setCheckFormation(fourThreeThree);
         return;
       case "threefivetwo":
-        setCheckFormation(threefivetwo);
+        setCheckFormation(threeFiveTwo);
         return;
       default:
-        setCheckFormation(fourfourtwo);
+        setCheckFormation(fourFourTwo);
         break;
     }
   }, [formation]);
@@ -70,8 +79,6 @@ function Field({ formation }) {
           close={() => setShowPlayersContainer(false)}
         />
       )}
-      
-       
     </main>
   );
 }

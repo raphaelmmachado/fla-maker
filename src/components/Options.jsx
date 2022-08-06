@@ -8,6 +8,7 @@ function Options({ formationState, takeFieldScreenshot, copied }) {
         id="formation"
       >
         <option value="fourfourtwo">4-4-2</option>
+        <option value="fourfourtwolosangle">losan</option>
         <option value="fourthreethree">4-3-3</option>
         <option value="threefivetwo">3-5-2</option>
       </select>
