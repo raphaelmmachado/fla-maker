@@ -13,7 +13,8 @@ function Options({ formationState, takeFieldScreenshot, copied }) {
         <option value="threefivetwo">3-5-2</option>
       </select>
       {copied && <div id="copied-text">Imagem do campo copiada!</div>}
-      <RiScreenshot2Line size={28} onClick={takeFieldScreenshot} className="take-screenshot" color={copied ? "green" : "black"}/>
+
+      <RiScreenshot2Line size={30} onClick={takeFieldScreenshot} className="take-screenshot" color={copied ? "green" : "black"}/>
     </div>
   );
 }

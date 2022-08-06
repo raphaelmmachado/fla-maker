@@ -47,8 +47,14 @@ select {
   color: green;
   font-size: 12px;
 }
+.take-screenshot{
+  margin: 1px;
+}
 .take-screenshot:hover{
   cursor: pointer;
+  border-top: 1px solid rgba(17, 17, 17, 0.753);
+  border-left: 1px solid rgba(22, 22, 22, 0.74);
+  background-color: rgba(201, 201, 201, 0.63);
 }
 .icons{
    display: flex;

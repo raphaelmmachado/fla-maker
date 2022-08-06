@@ -4,29 +4,30 @@ import { Icons } from "./components/Icons";
 import { Field } from "./components/Field";
 import { Footer } from "./components/Footer";
 
-import { createRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { useScreenshot } from "use-react-screenshot";
 import { copyImageToClipboard } from "copy-image-clipboard";
 
 function App() {
   const [formation, setFormation] = useState("fourfourtwo");
 
-  const ref = createRef(null);
+  const ref = useRef(null);
   const [image, takeScreenshot] = useScreenshot();
   const [copy, setCopy] = useState(false);
- 
-  const takeFieldScreenshot =  async() => {
-    await takeScreenshot(ref.current);
-    if(!image) return
-    try {
-    await copyImageToClipboard(image).then(()=> setCopy(true))
-    } catch (e) {
-      alert("Falha ao tirar print do campo. Tente novamente!");
-      console.log("Error: ", e.message);
-    }
+
+  const takeFieldScreenshot = async () => {
+    if (ref)
+      try {
+        await takeScreenshot(ref.current).then((image) =>
+          copyImageToClipboard(image).then((res) => console.log(res))
+        );
+        setCopy(true);
+      } catch (e) {
+        alert("Falha ao tirar print do campo. Tente novamente!");
+        console.log("Error: ", e.message);
+      }
     setTimeout(() => setCopy(false), 3000);
   };
-
 
   return (
     <div className="App" id="App">
