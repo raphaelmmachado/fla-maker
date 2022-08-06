@@ -37,6 +37,19 @@ const fourThreeThree = {
     tenth: { top: "80%", left: "10%" },
     eleventh: { top: "80%", left: "42%" },
 }
+const fourThreeThreeB = {
+    first: { top: "1%", left: "42.5%" },
+    second: { top: "22%", left: "7%" },
+    third: { top: "22%", left: "78%" },
+    fourth: { top: "10%", left: "25%" },
+    fifth: { top: "10%", left: "60%" },
+    sixth: { top: " 40%", left: "69%" },
+    seventh: { top: "40%", left: "20%" },
+    eighth: { top: "56%", left: "42.5%" },
+    ninth: { top: "70%", left: "75%" },
+    tenth: { top: "70%", left: "10%" },
+    eleventh: { top: "80%", left: "42%" },
+}
 const threeFiveTwo = {
     first: { top: "1%", left: "42.5%" },
     second: { top: "15%", left: "10%" },
@@ -50,4 +63,4 @@ const threeFiveTwo = {
     tenth: { top: "80%", left: "25%" },
     eleventh: { top: "80%", left: "60%" },
 }  
-export { fourFourTwo,fourFourTwoLosangle, fourThreeThree, threeFiveTwo}  
+export { fourFourTwo,fourFourTwoLosangle, fourThreeThree, fourThreeThreeB,threeFiveTwo}  

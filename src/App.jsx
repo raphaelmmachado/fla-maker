@@ -19,9 +19,8 @@ function App() {
     if (ref)
       try {
         await takeScreenshot(ref.current).then((image) =>
-          copyImageToClipboard(image).then((res) => console.log(res))
+          copyImageToClipboard(image).then(() => setCopy(true))
         );
-        setCopy(true);
       } catch (e) {
         alert("Falha ao tirar print do campo. Tente novamente!");
         console.log("Error: ", e.message);

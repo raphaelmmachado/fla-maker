@@ -7,9 +7,10 @@ function Options({ formationState, takeFieldScreenshot, copied }) {
         name="formation"
         id="formation"
       >
-        <option value="fourfourtwo">4-4-2</option>
-        <option value="fourfourtwolosangle">losan</option>
-        <option value="fourthreethree">4-3-3</option>
+        <option value="fourfourtwo">4-4-2A</option>
+        <option value="fourfourtwolosangle">4-4-2B</option>
+        <option value="fourthreethree">4-3-3A</option>
+        <option value="fourthreethreeb">4-3-3B</option>
         <option value="threefivetwo">3-5-2</option>
       </select>
       {copied && <div id="copied-text">Imagem do campo copiada!</div>}

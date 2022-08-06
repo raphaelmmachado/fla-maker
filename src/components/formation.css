@@ -198,7 +198,7 @@ footer a {
 ::-webkit-scrollbar-thumb:active {
   background: rgba(84, 131, 153, 0.795);
 }
-@media screen and (max-height: 537px) and (max-width: 650px) {
+@media screen and (max-width: 650px) {
   .header {
     display: grid;
     place-items: center;

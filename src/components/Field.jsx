@@ -7,6 +7,7 @@ import {
   fourFourTwo,
   fourFourTwoLosangle,
   fourThreeThree,
+  fourThreeThreeB,
   threeFiveTwo,
 } from "../util/positions";
 
@@ -54,6 +55,9 @@ function Field({ formation }) {
         return
       case "fourthreethree":
         setCheckFormation(fourThreeThree);
+        return;
+        case "fourthreethreeb":
+        setCheckFormation(fourThreeThreeB);
         return;
       case "threefivetwo":
         setCheckFormation(threeFiveTwo);

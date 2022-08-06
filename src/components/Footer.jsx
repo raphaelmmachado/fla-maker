@@ -2,7 +2,8 @@ import {AiFillGithub} from "react-icons/ai"
 function Footer (){
     return (
         <footer>
-            <a href="https://github.com/rm0909"><span><p>Raphael Machado </p><AiFillGithub /></span></a> 
+            contato: raphael.mm.91@gmail.com
+            {/* <a href="https://github.com/rm0909"><span><p>Raphael Machado </p><AiFillGithub /></span></a>  */}
         </footer>
     )
 }
