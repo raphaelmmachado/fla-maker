@@ -16,6 +16,7 @@ function Field({ formation }) {
   const [clickedCircle, setClickedCircle] = useState("");
   const [selectedPlayers, setSelectedPlayers] = useState({});
   const [checkFormation, setCheckFormation] = useState("");
+  
 
   const selectPosition = (e) => {
     if (e.target.getAttribute("clear") === "true") return;
@@ -32,7 +33,7 @@ function Field({ formation }) {
       return { ...prevSelected, [clickedCircle]: player };
     });
   };
-  const clearPlayer = async (e) => {
+  const clearPlayer =  (e) => {
     const circleID = e.target.getAttribute("value");
     setClickedCircle(circleID);
     if (circleID !== clickedCircle) return;

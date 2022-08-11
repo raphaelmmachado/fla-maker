@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { VscFoldDown } from "react-icons/vsc";
 
 function Header() {
+  //check if is mobile
   const [mobileScreen, setMobileScreen] = useState(false);
   useEffect(() => {
     window.addEventListener("resize", checkScreen);

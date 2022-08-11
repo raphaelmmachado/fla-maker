@@ -1,5 +1,8 @@
 import { RiScreenshot2Line } from "react-icons/ri";
+import ReactTooltip from "react-tooltip";
+
 function Options({ formationState, takeFieldScreenshot, copied }) {
+  
   return (
     <div className="select-formation">
       <select
@@ -15,7 +18,23 @@ function Options({ formationState, takeFieldScreenshot, copied }) {
       </select>
       {copied && <div id="copied-text">Imagem do campo copiada!</div>}
 
-      <RiScreenshot2Line size={30} onClick={takeFieldScreenshot} className="take-screenshot" color={copied ? "green" : "black"}/>
+      <div data-tip="print" data-for="tooltip">
+        <RiScreenshot2Line
+          size={30}
+          onClick={takeFieldScreenshot}
+          className="take-screenshot"
+          color={copied ? "green" : "black"}
+        />
+      </div>
+      <ReactTooltip
+        id="tooltip"
+        type="info"
+        place="right"
+        effect="solid"
+        delayHide={500}
+        delayShow={200}
+        delayUpdate={500}
+      />
     </div>
   );
 }

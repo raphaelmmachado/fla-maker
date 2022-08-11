@@ -8,6 +8,7 @@ function Select({ selectPlayer, close }) {
   const midfielders = players.filter((player) => player.pos === "M");
   const attackers = players.filter((player) => player.pos === "A");
 
+  
   return (
     <div className="players-container">
       <div onClick={() => close()} className="close">

@@ -1,16 +1,18 @@
+import { useRef, useState } from "react";
+import { useScreenshot } from "use-react-screenshot";
+import { copyImageToClipboard } from "copy-image-clipboard";
+
 import { Header } from "./components/Header";
 import { Options } from "./components/Options";
 import { Icons } from "./components/Icons";
 import { Field } from "./components/Field";
 import { Footer } from "./components/Footer";
 
-import { useRef, useState } from "react";
-import { useScreenshot } from "use-react-screenshot";
-import { copyImageToClipboard } from "copy-image-clipboard";
-
 function App() {
+// state of selected formation
   const [formation, setFormation] = useState("fourfourtwo");
 
+//  Button to take screenshot of the field
   const ref = useRef(null);
   const [image, takeScreenshot] = useScreenshot();
   const [copy, setCopy] = useState(false);
