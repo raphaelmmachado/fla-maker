@@ -19,4 +19,4 @@ Build your Flamengo formation.
 - take screenshot of a component and copy to clipboard
 
 ### Biggest difficulty:
-- add new keys to object states
+- add new keys to object state
