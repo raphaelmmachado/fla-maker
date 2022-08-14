@@ -70,7 +70,7 @@ select {
   position: relative;
   display: grid;
   place-items: center;
-  background-image: url("../assets/icons/campo-editado-2.png");
+  background-image: url("../assets/icons/campo_editado.png");
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgb(12, 107, 12);

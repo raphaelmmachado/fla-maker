@@ -84,7 +84,7 @@ function Formation({ selectPosition, selectedPlayers, clearPlayer, styles }) {
         {selectedPlayers["fourth"] && (
           <div className="player-circle" onMouseEnter={()=> setShowClearButton(true)} onMouseLeave={()=> setShowClearButton(false)}>
             <img
-              className="selceted-player-picture"
+              className="player-picture"
               src={selectedPlayers["fourth"].img}
             />
             <p className="default-cursor">{selectedPlayers["fourth"].name}</p>
