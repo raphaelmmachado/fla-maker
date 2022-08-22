@@ -26,8 +26,10 @@ import thiagomaia from "../assets/players/thiagomaia.jpg";
 import vidal from "../assets/players/vidal.jpg";
 import vitinho from "../assets/players/vitinho.jpg";
 import diegoalves from "../assets/players/diegoalves.jpg";
-import vitorhugo from "../assets/players/vitor_hugo.jpg";
-import oscar from "../assets/players/oscar.png"
+import vitorhugo from "../assets/players/victorhugo.jpg";
+import pulgar from "../assets/players/pulgar.jpg";
+import varela from "../assets/players/varela.jpg";
+
 const players = [
   {
     name: "Gabigol",
@@ -109,7 +111,7 @@ const players = [
   {
     name: "Pulgar",
     num: 5,
-    img: "https://img.a.transfermarkt.technology/portrait/big/215616-1643971374.png?lm=1",
+    img: pulgar,
     pos: "M",
   },
   {
@@ -220,7 +222,7 @@ const players = [
   {
     name: "Guilhermo Varela",
     num: 2,
-    img: "https://img.a.transfermarkt.technology/portrait/big/188862-1605115531.png?lm=1",
+    img: varela,
     pos: "L",
   },
   {
@@ -240,12 +242,6 @@ const players = [
     num: 33,
     img: cleiton,
     pos: "D"
-  },
-  {
-    name: "Oscar",
-    num: 99,
-    img: oscar,
-    pos: "M"
   }
 ];
 const sortedPlayers = players.sort((a, b) => a.num - b.num);
