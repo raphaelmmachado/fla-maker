@@ -5,7 +5,7 @@ import { copyImageToClipboard } from "copy-image-clipboard";
 import { Header } from "./components/Header";
 import { Options } from "./components/Options";
 import { Icons } from "./components/Icons";
-import { Field } from "./components/Field";
+import { Formation } from "./components/Formation";
 import { Footer } from "./components/Footer";
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
         copied={copy}
       />
       <div ref={ref}>
-        <Field formation={formation} />
+        <Formation formation={formation} />
       </div>
       <Icons />
       <Footer />

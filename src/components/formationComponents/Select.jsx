@@ -1,6 +1,5 @@
-import { sortedPlayers as players } from "../util/players";
-import closeImg from "../assets/icons/goback.svg";
-import arrowUp from "../assets/icons/arrow-up.svg"
+import { sortedPlayers as players } from "../../util/players.js";
+import arrowUp from "../../assets/icons/arrow-up.svg"
 function Select({ selectPlayer, close }) {
   const goalKeepers = players.filter((player) => player.pos === "G");
   const sideBacks = players.filter((player) => player.pos === "L");
@@ -25,7 +24,7 @@ function Select({ selectPlayer, close }) {
             >
               <img className="player-picture" src={player.img} />
               <h3> {player.name}</h3>
-              <h5>#{player.num}</h5>
+              <h5> {player.num}</h5>
             </div>  
         );
       })}
@@ -39,7 +38,7 @@ function Select({ selectPlayer, close }) {
           >
             <img className="player-picture" src={player.img} />
             <h3> {player.name}</h3>
-            <h5>#{player.num}</h5>
+            <h5>{player.num}</h5>
           </div>
         );
       })}
@@ -53,7 +52,7 @@ function Select({ selectPlayer, close }) {
           >
             <img className="player-picture" src={player.img} />
             <h3> {player.name}</h3>
-            <h5>#{player.num}</h5>
+            <h5>{player.num}</h5>
           </div>
         );
       })}
@@ -67,7 +66,7 @@ function Select({ selectPlayer, close }) {
           >
             <img className="player-picture" src={player.img} />
             <h3> {player.name}</h3>
-            <h5>#{player.num}</h5>
+            <h5>{player.num}</h5>
           </div>
         );
       })}
@@ -81,7 +80,7 @@ function Select({ selectPlayer, close }) {
           >
             <img className="player-picture" src={player.img} />
             <h3> {player.name}</h3>
-            <h5>#{player.num}</h5>
+            <h5>{player.num}</h5>
           </div>
         );
       })}
