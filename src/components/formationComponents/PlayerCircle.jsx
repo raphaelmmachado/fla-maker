@@ -1,7 +1,6 @@
 import {useState} from "react"
 function PlayerCircle({selectPosition,id,selectedPlayers,closeIcon,clearPlayer,styles}) {
     const [showClearButton,setShowClearButton] = useState(false)
-    console.log(showClearButton)
   return (
     <>
       {" "}

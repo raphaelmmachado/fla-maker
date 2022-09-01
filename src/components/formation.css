@@ -40,6 +40,10 @@ select {
   justify-content: space-between;
   align-items: center;
 }
+#team{
+  text-align: center;
+  width: 50%;
+}
 #print-do-campo{
   text-align: end;
 }

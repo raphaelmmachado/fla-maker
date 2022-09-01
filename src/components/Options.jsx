@@ -1,8 +1,7 @@
 import { RiScreenshot2Line } from "react-icons/ri";
 import ReactTooltip from "react-tooltip";
 
-function Options({ formationState, takeFieldScreenshot, copied }) {
-  
+function Options({ formationState, teamState, takeFieldScreenshot, copied }) {
   return (
     <div className="select-formation">
       <select
@@ -16,8 +15,10 @@ function Options({ formationState, takeFieldScreenshot, copied }) {
         <option value="fourthreethreeb">4-3-3B</option>
         <option value="threefivetwo">3-5-2</option>
       </select>
-      {copied && <div id="copied-text">Imagem do campo copiada!</div>}
-
+      <select onChange={(e) => teamState(e.target.value)} name="team" id="team">
+        <option value="flamengo">Flamengo</option>
+        <option value="selecao">Seleção Brasileira</option>
+      </select>
       <div data-tip="print" data-for="tooltip">
         <RiScreenshot2Line
           size={30}

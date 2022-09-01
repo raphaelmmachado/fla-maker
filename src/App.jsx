@@ -11,7 +11,7 @@ import { Footer } from "./components/Footer";
 function App() {
 // state of selected formation
   const [formation, setFormation] = useState("fourfourtwo");
-
+  const [team, setTeam] = useState("flamengo")
 //  Button to take screenshot of the field
   const ref = useRef(null);
   const [image, takeScreenshot] = useScreenshot();
@@ -34,13 +34,14 @@ function App() {
     <div className="App" id="App">
       <Header />
       <Options
-        formationState={(value) => setFormation(value)}
+        formationState={(formation) => setFormation(formation)}
+        teamState={(team)=> setTeam(team)}
         takeFieldScreenshot={takeFieldScreenshot}
         screenshot={image}
         copied={copy}
       />
       <div ref={ref}>
-        <Formation formation={formation} />
+        <Formation formation={formation} team={team}/>
       </div>
       <Icons />
       <Footer />

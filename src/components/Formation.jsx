@@ -11,7 +11,12 @@ import {
   threeFiveTwo,
 } from "../util/positions";
 
-function Formation({ formation }) {
+function Formation({ formation, team }) {
+
+  useEffect(()=>{
+    resetAllPlayers()
+  },[team]);
+  
   const [showPlayersContainer, setShowPlayersContainer] = useState(false);
   const [clickedCircle, setClickedCircle] = useState("");
   const [selectedPlayers, setSelectedPlayers] = useState({});
@@ -41,6 +46,7 @@ function Formation({ formation }) {
       return { ...prevSelected, [clickedCircle]: null };
     });
   };
+  const resetAllPlayers = ()=> setSelectedPlayers({})
   const goBack = (e) => {
     if (e.target.id === "field") setShowPlayersContainer(false);
     return;
@@ -79,7 +85,7 @@ function Formation({ formation }) {
       />
 
       {showPlayersContainer && (
-        <Select
+        <Select team={team}
           selectPlayer={selectPlayer}
           close={() => setShowPlayersContainer(false)}
         />
