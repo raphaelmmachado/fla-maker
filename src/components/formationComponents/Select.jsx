@@ -1,4 +1,4 @@
-import { players as playerModule} from "../../util/players.js";
+import { players as playerModule} from "../../util/players.ts";
 import arrowUp from "../../assets/icons/arrow-up.svg"
 
 function Select({ selectPlayer, close,team }) {

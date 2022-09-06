@@ -208,14 +208,4 @@ footer a {
 ::-webkit-scrollbar-thumb:active {
   background: rgba(84, 131, 153, 0.795);
 }
-@media screen and (max-width: 650px) {
-  .header {
-    display: grid;
-    place-items: center;
-    place-content: center;
-    height: 537px;
-  }
-  .arrow-down {
-    margin-top: 3rem;
-  }
-}
+
