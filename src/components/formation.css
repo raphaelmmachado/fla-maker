@@ -107,7 +107,7 @@ select {
   left: 99%;
 }
 .player p {
-  font-size: 11px;
+  font-size: 0.8rem;
   font-weight: 400;
   max-width: 50px;
   color: var(--font-color);
@@ -134,22 +134,29 @@ select {
   font-family: var(--font);
   color: var(--black-darker);
   padding: 2px;
-  margin: 1px;
+  margin: 0 auto;
 }
+
 .player-box:hover {
   cursor: pointer;
   background-color: var(--red-hover);
 }
-.player-picture {
+.player-selected {
   display: block;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 3px solid var(--red);
+  background-color: #5f5f5f86
 }
-.red-border{
-  border: 3px solid var(--red);
+.select-player-photo{
+  width: 60px;
+  background-color: rgba(5, 5, 5, 0.11);
 }
+.player-name{
+  width: 195px;
+}
+
 .close {
   display: flex;
   flex-direction: column;

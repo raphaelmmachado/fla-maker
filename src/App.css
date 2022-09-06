@@ -14,3 +14,14 @@
   padding: 8px;
   margin: 1px;
 }
+h4{
+  padding: 0;
+  margin: 0;
+}
+h5{
+  padding: 0;
+  margin: 0;
+}
+select{
+  font-size: 0.9rem;
+}

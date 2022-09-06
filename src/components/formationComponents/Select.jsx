@@ -1,35 +1,38 @@
-import { players as playerModule} from "../../util/players.ts";
-import arrowUp from "../../assets/icons/arrow-up.svg"
+import { players as playerModule } from "../../util/players.ts";
+import arrowUp from "../../assets/icons/arrow-up.svg";
 
-function Select({ selectPlayer, close,team }) {
+function Select({ selectPlayer, close, team }) {
   const players = playerModule[team].sort((a, b) => a.num - b.num);
   const goalKeepers = players.filter((player) => player.pos === "G");
   const sideBacks = players.filter((player) => player.pos === "L");
   const defenders = players.filter((player) => player.pos === "D");
-  const defMidFielders = players.filter(player => player.pos === "V")
+  const defMidFielders = players.filter((player) => player.pos === "V");
   const midfielders = players.filter((player) => player.pos === "M");
   const wingers = players.filter((player) => player.pos === "P");
   const attackers = players.filter((player) => player.pos === "A");
 
-  
   return (
-    <div className="players-container">
+    <div id="player-list" className="players-container">
       <div onClick={() => close()} className="close">
-        <div><img src={arrowUp} /></div>
+        <div>
+          <img src={arrowUp} />
+        </div>
         <div className="go-back"></div>
       </div>
       <div className="position-title">GOLEIROS</div>
       {goalKeepers.map((player) => {
         return (
-            <div
-              key={player.num}
-              onClick={() => selectPlayer(player)}
-              className="player-box"
-            >
-              <img className="player-picture" src={player.img} />
-              <h3> {player.name}</h3>
-              <h5> {player.num}</h5>
-            </div>  
+          <div
+            key={player.num}
+            onClick={() => selectPlayer(player)}
+            className="player-box"
+          >
+            <img className="select-player-photo" src={player.img} />
+            <div className="player-name">
+              <h4>{player.name}</h4>
+            </div>
+            
+          </div>
         );
       })}
       <div className="position-title">ZAGUEIROS</div>
@@ -40,9 +43,8 @@ function Select({ selectPlayer, close,team }) {
             onClick={() => selectPlayer(player)}
             className="player-box"
           >
-            <img className="player-picture" src={player.img} />
-            <h3> {player.name}</h3>
-            <h5>{player.num}</h5>
+            <img className="select-player-photo" src={player.img} />
+            <h4 className="player-name"> {player.name}</h4>
           </div>
         );
       })}
@@ -54,9 +56,8 @@ function Select({ selectPlayer, close,team }) {
             onClick={() => selectPlayer(player)}
             className="player-box"
           >
-            <img className="player-picture" src={player.img} />
-            <h3> {player.name}</h3>
-            <h5>{player.num}</h5>
+            <img className="select-player-photo" src={player.img} />
+            <h4 className="player-name"> {player.name}</h4>
           </div>
         );
       })}
@@ -68,9 +69,8 @@ function Select({ selectPlayer, close,team }) {
             onClick={() => selectPlayer(player)}
             className="player-box"
           >
-            <img className="player-picture" src={player.img} />
-            <h3> {player.name}</h3>
-            <h5>{player.num}</h5>
+            <img className="select-player-photo" src={player.img} />
+            <h4 className="player-name"> {player.name}</h4>
           </div>
         );
       })}
@@ -82,9 +82,8 @@ function Select({ selectPlayer, close,team }) {
             onClick={() => selectPlayer(player)}
             className="player-box"
           >
-            <img className="player-picture" src={player.img} />
-            <h3> {player.name}</h3>
-            <h5>{player.num}</h5>
+            <img className="select-player-photo" src={player.img} />
+            <h4 className="player-name"> {player.name}</h4>
           </div>
         );
       })}
@@ -96,9 +95,8 @@ function Select({ selectPlayer, close,team }) {
             onClick={() => selectPlayer(player)}
             className="player-box"
           >
-            <img className="player-picture" src={player.img} />
-            <h3> {player.name}</h3>
-            <h5>{player.num}</h5>
+            <img className="select-player-photo" src={player.img} />
+            <h4 className="player-name"> {player.name}</h4>
           </div>
         );
       })}
@@ -110,13 +108,11 @@ function Select({ selectPlayer, close,team }) {
             onClick={() => selectPlayer(player)}
             className="player-box"
           >
-            <img className="player-picture" src={player.img} />
-            <h3> {player.name}</h3>
-            <h5>{player.num}</h5>
+            <img className="select-player-photo" src={player.img} />
+            <h4 className="player-name"> {player.name}</h4>
           </div>
         );
       })}
-      
     </div>
   );
 }

@@ -85,7 +85,8 @@ function Formation({ formation, team }) {
       />
 
       {showPlayersContainer && (
-        <Select team={team}
+        <Select
+         team={team}
           selectPlayer={selectPlayer}
           close={() => setShowPlayersContainer(false)}
         />

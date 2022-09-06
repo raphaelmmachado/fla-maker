@@ -17,7 +17,7 @@ function PlayerCircle({selectPosition,id,selectedPlayers,closeIcon,clearPlayer,s
             onMouseLeave={() => setShowClearButton(false)}
           >
             <img
-              className="player-picture red-border"
+              className="player-selected"
               src={selectedPlayers[id].img}
             />
             <p className="default-cursor">{selectedPlayers[id].name}</p>
