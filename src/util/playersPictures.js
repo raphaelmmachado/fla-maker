@@ -5,12 +5,9 @@ import brunohenrique from "../assets/players/flamengo/brunohenrique.png";
 import cebolinha from "../assets/players/flamengo/cebolinha.png";
 import cleiton from "../assets/players/flamengo/cleiton.png";
 import davidluiz from "../assets/players/flamengo/davidluiz.png";
-import diegoribas from "../assets/players/flamengo/diegoribas.png";
 import evertonribeiro from "../assets/players/flamengo/evertonribeiro.png";
 import fabriciobruno from "../assets/players/flamengo/fabriciobruno.png";
 import filipeluis from "../assets/players/flamengo/filipeluis.png";
-import joaogomes from "../assets/players/flamengo/joaogomes.png";
-import lazaro from "../assets/players/flamengo/lazaro.png";
 import leopereira from "../assets/players/flamengo/leopereira.png";
 import marinho from "../assets/players/flamengo/marinho.png";
 import matheuscunha from "../assets/players/flamengo/matheuscunha.png";
@@ -19,15 +16,14 @@ import matheuzinho from "../assets/players/flamengo/matheuzinho.png";
 import neneca from "../assets/players/flamengo/neneca.png";
 import pablo from "../assets/players/flamengo/pablo.png";
 import pedro from "../assets/players/flamengo/pedro.png";
-import rodinei from "../assets/players/flamengo/rodinei.png";
 import rodrigocaio from "../assets/players/flamengo/rodrigocaio.png";
 import santos from "../assets/players/flamengo/santos.png";
 import thiagomaia from "../assets/players/flamengo/thiagomaia.png";
 import vidal from "../assets/players/flamengo/vidal.png";
-import diegoalves from "../assets/players/flamengo/diegoalves.png";
 import vitorhugo from "../assets/players/flamengo/victorhugo.png";
 import pulgar from "../assets/players/flamengo/pulgar.png";
 import varela from "../assets/players/flamengo/varela.png";
+import mgoncalves from "../assets/players/flamengo/mgoncalves.png";
 /*brazil*/
 import alexSandro from "../assets/players/selecao/alexsandro.jpeg";
 import alextelles from "../assets/players/selecao/alextelles.jpeg";
@@ -76,8 +72,6 @@ export {
   danielalves,
   danilosantos,
   davidluiz,
-  diegoalves,
-  diegoribas,
   ederson,
   evertonribeiro,
   fabinho,
@@ -87,8 +81,6 @@ export {
   gabigol,
   gabrieljesus,
   gerson,
-  joaogomes,
-  lazaro,
   leopereira,
   magalhaes,
   marinho,
@@ -97,6 +89,7 @@ export {
   matheuscunha,
   matheusfranca,
   matheuzinho,
+  mgoncalves,
   militao,
   neneca,
   neymar,
@@ -106,7 +99,6 @@ export {
   pulgar,
   raphinha,
   richarlison,
-  rodinei,
   rodrigocaio,
   rodrygo,
   santos,
